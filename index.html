@@ -29,12 +29,19 @@
       font-size: 24px;
       text-shadow: 2px 2px 4px black;
     }
+    #passwordPrompt {
+      display: none;
+  
   </style>
 </head>
 <body>
   <h1>New Year Greeting for Nicole Anne Z. Diaz</h1>
-  <button id="showMessage">Nicole, click here to recieve your messag</button>
-  <div id="message" style="display: none;"> 
+  <button id="showPasswordPrompt">Enter Password</button>
+  <div id="passwordPrompt">
+    <input type="password" id="passwordField" placeholder="Enter Password">
+    <button id="submitPassword">Submit</button>
+  </div>
+  <div id="message" style="display: none;">
     <p>Nicoleeeee 2024 na di ka ganahan mang libre?HAHAHAHAHAHAH charezz.
     Thank you so much for being with me this yearrrrr, I hope close gihapon ta next, ug sa padulong nga years. 
     You are probably the best person I met in 2022, cuz you know there nag start atong highschool lifee. Ambot unnsay naa nimo kol pero lrj kaaaaaaaaaaaaa. 
@@ -59,11 +66,22 @@
     <p>I think mao rmn guro na ang things akong ganahan i-ingon
     giatay new year message rmn ta ni ramag confession HAHAHAHAHAHAHAHAHAHAHAAHAHAH di man ko ingani sauna bay</p>
   </div>
+  
   <script>
-    document.getElementById('showMessage').addEventListener('click', function() {
-      document.getElementById('message').style.display = 'block';
+    document.getElementById('showPasswordPrompt').addEventListener('click', function() {
+      document.getElementById('passwordPrompt').style.display = 'block';
+    });
+
+    document.getElementById('submitPassword').addEventListener('click', function() {
+      var password = document.getElementById('passwordField').value;
+      // Replace 'yourpassword' with the actual password
+      if (password === 'yourpassword') {
+        document.getElementById('passwordPrompt').style.display = 'none';
+        document.getElementById('message').style.display = 'block';
+      } else {
+        alert('Incorrect password. Access denied.');
+      }
     });
   </script>
 </body>
 </html>
-
