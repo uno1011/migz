@@ -2,20 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Greeting Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>New Year Greeting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    #message {
+      display: none;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to the Greeting Page!</h1>
-    <p>Click the button below to receive a greeting.</p>
-    <button id="greetButton">Get Greeting</button>
-    <div id="greetingMessage" style="display: none;">
-      <h2>Greetings!</h2>
-      <p id="greetingText"></p>
-    </div>
-  </div>
+  <h1>New Year Greeting</h1>
+  <button id="showMessage">Click for New Year's Greeting</button>
+  <p id="message">Happy New Year!</p>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('showMessage').addEventListener('click', function() {
+      document.getElementById('message').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
+
