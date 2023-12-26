@@ -92,7 +92,23 @@
       if (password === '624316') {
         document.getElementById('passwordPrompt').style.display = 'none';
         document.getElementById('message').style.display = 'block';
-      } else {
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        var message = hiii; // Replace with your actual message
+        var index = 0;
+        var messageElement = document.getElementById('message');
+
+        function typeWriter() {
+          if (index < message.length) {
+            messageElement.innerHTML += message.charAt(index);
+            index++;
+            setTimeout(typeWriter, 50); // Adjust typing speed (milliseconds)
+          }
+        }
+        setTimeout(typeWriter, 1000); 
+      });
+      // Typing effect script ends here
+        } else {
         alert('Incorrect password. Access denied.');
       }
     });
