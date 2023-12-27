@@ -32,6 +32,22 @@
     #passwordPrompt {
       display: none;
     }
+    h1 {
+      /* Your existing styles... */
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+      }
+      100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de;
+      }
+    }
+    
+    
     h2 {
       font-size: 30px;
       margin-bottom: 50px;
@@ -61,6 +77,9 @@
     <input type="password" id="passwordField" placeholder="Enter Password">
     <button id="submitPassword">Submit</button>
     <p>Hint: Your birthday and Miguels birthday(month/day/month/day)</p>
+  </div>
+  <div id="warning" style="font-family:futura;">
+    <button id="showWarning">Show Warning</button>
   </div>
   <div id="message" style="display: none;">
   <h2 style="color: yellow;">
