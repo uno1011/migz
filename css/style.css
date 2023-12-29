@@ -8,7 +8,7 @@
 }
 body{
     color: azure;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     display: flex;
     flex-direction: column;
